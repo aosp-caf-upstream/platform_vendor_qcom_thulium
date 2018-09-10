@@ -54,10 +54,9 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8996/media_profiles.xml:system/etc/media_profiles.xml \
     device/qcom/msm8996/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
     device/qcom/msm8996/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    device/qcom/msm8996/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor.xml \
     device/qcom/msm8996/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     device/qcom/msm8996/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
-PRODUCT_PROPERTY_OVERRIDES  += \
-    media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 endif  #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
 PRODUCT_COPY_FILES += device/qcom/msm8996/whitelistedapps.xml:system/etc/whitelistedapps.xml \
@@ -165,11 +164,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service \
-
-# Context hub HAL
-PRODUCT_PACKAGES += \
-    android.hardware.contexthub@1.0-impl.generic \
-    android.hardware.contexthub@1.0-service
 
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
@@ -326,3 +320,7 @@ PRODUCT_PACKAGES += android.hardware.thermal@1.0-impl \
                     android.hardware.thermal@1.0-service
 
 SDM660_DISABLE_MODULE := true
+
+# Enable extra vendor libs
+ENABLE_EXTRA_VENDOR_LIBS := true
+PRODUCT_PACKAGES += vendor-extra-libs

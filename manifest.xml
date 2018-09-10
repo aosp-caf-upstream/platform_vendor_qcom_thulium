@@ -29,7 +29,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>4.0</version>
         <interface>
             <name>IDevicesFactory</name>
             <instance>default</instance>
@@ -38,7 +38,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>4.0</version>
         <interface>
             <name>IEffectsFactory</name>
             <instance>default</instance>
@@ -316,6 +316,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IGnss</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::IGnss/gnss_vendor</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.gnss</name>
@@ -580,24 +581,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>com.quicinc.cne.api</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IApiService</name>
-            <instance>cnd</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>com.quicinc.cne.server</name>
-        <transport>hwbinder</transport>
-        <version>2.2</version>
-        <interface>
-            <name>IServer</name>
-            <instance>cnd</instance>
-        </interface>
-    </hal>
     <!-- WFD HAL Service -->
     <hal format="hidl">
         <name>com.qualcomm.qti.wifidisplayhal</name>
@@ -628,16 +611,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <version>1.0</version>
         <interface>
             <name>IEsePowerManager</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <!-- Voiceprint Service -->
-    <hal format="hidl">
-        <name>vendor.qti.voiceprint</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IQtiVoicePrintService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -734,16 +707,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <version>1.0</version>
         <interface>
             <name>IOffloadControl</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <!-- Context Hub HAL Service -->
-    <hal format="hidl">
-        <name>android.hardware.contexthub</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IContexthub</name>
             <instance>default</instance>
         </interface>
     </hal>
